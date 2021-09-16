@@ -1,13 +1,4 @@
 Rails.application.routes.draw do
-  # This line mounts Solidus's routes at the root of your application.
-  # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
-  # If you would like to change where this engine is mounted, simply change the :at option to something different.
-  #
-  # We ask that you don't use the :as option here, as Solidus relies on it being the default of "spree"
-  mount Spree::Core::Engine, at: '/'
-
-mount SolidusPaypalCommercePlatform::Engine, at: '/solidus_paypal_commerce_platform'
-
   rutarel = ENV.fetch('RUTA_RELATIVA', 'sivel2_explora/')
   scope rutarel do 
 
@@ -36,9 +27,13 @@ mount SolidusPaypalCommercePlatform::Engine, at: '/solidus_paypal_commerce_platf
 
     #get '/casos/mapaosm' => 'sivel2_gen/casos#mapaosm'
 
-    root 'sip/hogar#index'
+    root to: 'spree/home#index'
   end # scope
 
   mount Sip::Engine, at: rutarel, as: 'sip'
+
+  # We ask that you don't use the :as option here, as Solidus relies on it being the default of "spree"
+  mount Spree::Core::Engine, at: rutarel
+  mount SolidusPaypalCommercePlatform::Engine, at: rutarel+'/solidus_paypal_commerce_platform'
 
 end

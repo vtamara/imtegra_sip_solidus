@@ -36,3 +36,9 @@ yarn-debug.log*
 .yarn-integrity
 *~
 .env
+tmp/
+*core
+ref/
+ref2/
+public/sivel2exp/assets/
+

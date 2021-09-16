@@ -1,24 +1,4 @@
 GIT
-  remote: https://github.com/pasosdeJesus/heb412_gen.git
-  revision: 8b8d162027ad1629558a656835f03960702ac5c4
-  branch: main
-  specs:
-    heb412_gen (1.0.b7)
-      mr519_gen
-      redcarpet
-      rspreadsheet
-      sip
-
-GIT
-  remote: https://github.com/pasosdeJesus/mr519_gen.git
-  revision: 2a57fde4367fb8a0f261c887729513a3e89b0ba3
-  branch: main
-  specs:
-    mr519_gen (0.2.1)
-      rails
-      sip
-
-GIT
   remote: https://github.com/pasosdeJesus/sip.git
   revision: e4e0a1043deba28353a42aed6119186bb234efc5
   branch: sinwillpaginate
@@ -35,16 +15,6 @@ GIT
       rails-i18n
       simple_form
       twitter_cldr
-
-GIT
-  remote: https://github.com/pasosdeJesus/sivel2_gen.git
-  revision: 217abf1ed8a8f890e9d6fee388bb56ef42d615aa
-  branch: main
-  specs:
-    sivel2_gen (2.0b16)
-      devise
-      jquery-rails
-      rails
 
 GIT
   remote: https://github.com/vtamara/cocoon.git
@@ -498,13 +468,11 @@ DEPENDENCIES
   devise
   devise-i18n
   dotenv-rails
-  heb412_gen!
   jbuilder (~> 2.7)
   kaminari
   kt-paperclip
   libxml-ruby
   minitest
-  mr519_gen!
   nokogiri
   odf-report
   pg (~> 1.1)
@@ -520,7 +488,6 @@ DEPENDENCIES
   selenium-webdriver
   simple_form
   sip!
-  sivel2_gen!
   solidus (~> 3.1.0)
   solidus_paypal_commerce_platform
   spring
